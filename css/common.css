@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -11,4 +13,32 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 360px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

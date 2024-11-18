@@ -24,3 +24,17 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+const createGalleryCard = pictureInfo => {
+  return `<li class = "gallery-item">
+  <img src = "${pictureInfo.url}" alt = "${pictureInfo.alt}">
+  </li>
+  `;
+};
+
+const createGalleryTemplate = images
+  .map(pictureInfo => createGalleryCard(pictureInfo))
+  .join('');
+
+const galleryEl = document.querySelector('.gallery');
+galleryEl.insertAdjacentHTML('afterbegin', createGalleryTemplate);
